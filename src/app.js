@@ -1,8 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 import { port } from "./config.js"
-import {db} from "./mysqldb.js"
-
+import MySQLDatabase from "./mysqldb.js"
+const db =new MySQLDatabase();
 const app = express();
 app.use(bodyParser.json());
 app.set("view engine", "ejs");
